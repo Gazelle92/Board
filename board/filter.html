@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/colume.css"/>
+    <link rel="stylesheet" href="./css/filter.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/parallax.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="header_logo" src="./img/header_logo.png"/></a>
+    <ul>
+      <li><a href="./index.html">전시</a><div class="header_border"></div></li>
+      <li><a href="./edu.html">교육행사</a><div class="header_border"></div></li>
+      <li><a href="./filter.html">소장품</a><div class="header_border"></div></li>
+      <li><a href="./board.html">학술출판</a><div class="header_border"></div></li>
+      <li><a href="./news.html">소식참여</a><div class="header_border"></div></li>
+    </ul>
+    <div id="border"></div>
+</header>
+
+<div id="wrap">
+    <section class="filter_section" id="main">
+      <div class="serch_wrap">
+        <p><input type="text" id="quicksearch" placeholder="소장품검색" /></p>
+        <div id="filters" class="button-group">
+          <button class="button is-checked" data-filter="*">전체보기</button>
+          <button class="button" data-filter=".prehistoric">선사·고대</button>
+          <button class="button" data-filter=".middle">중·근세</button>
+          <button class="button" data-filter=".sculpt">조각·공예</button>
+          <button class="button" data-filter=".painting">서화</button>
+          <button class="button" data-filter=".asia">아시아</button>
+          <button class="button" data-filter=".science">보존과학</button>
+        </div>
+    </div>
+    <div class="warning">검색 결과가 없습니다!</div>
+    <!--element list //prehistoric middle // asia sculpt painting science -->
+    <div class="grid">
+      <div class="element-item prehistoric asia painting">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/09/37CB515D-FE55-567D-7F67-162244814D1B_thumb.jpg">
+        <h3 class="name">이징의 <화개현구장도> - 선현을 그리는 마음 대표이미지</h3> 
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">조선 1643년</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">89×56cm</p>
+          <p class="id">보물 제1046호</p>
+          <p class="location">신수 10579</p>
+        </div>
+      </div>
+
+
+      <div class="element-item middle asia painting">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/09/BB821D90-8D53-2596-98D4-1DF51F61C737_thumb.jpg">
+        <h3 class="name">창조신 복희와 여와 - 투루판 고창국의 장례 문화를 이해하는 키워드</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">7 세기</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">188.5x93.2cm</p>
+          <p class="location">본관 4027</p>
+        </div>
+      </div>
+
+      <div class="element-item middle asia sculpt">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/09/C43C20AC-BD68-4FF0-0F4E-2EE9CEDD0793_thumb.jpg">
+        <h3 class="name">부처의 생애를 새긴 비상 - 조각과 함께 떠나는 성지순례</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">인도 팔라시대 10세기</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">높이 40.6cm</p>
+          <p class="location">구 3269</p>
+        </div>
+      </div>
+
+
+      <div class="element-item middle asia sculpt">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/03/867C91D9-AFE0-A025-1C71-1F64A50C0061_thumb.jpg">
+        <h3 class="name">고려 원공(圓空) 스님을 기리는 탑</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">고려</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">높이 846cm</p>
+          <p class="id">보물 제190호</p>
+          <p class="location">신수 192</p>
+        </div>
+      </div>
+
+      <div class="element-item middle asia painting">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/03/A8320FEC-009F-28EC-59DD-591BD1BBE9C0_thumb.jpg">
+        <h3 class="name">역사의 한 조각을 품은 불화 - '회암사'명 약사여래삼존도</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">조선 1565년</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">54.2x29.7cm</p>
+          <p class="location">덕수 3324</p>
+        </div>
+      </div>
+
+
+      <div class="element-item middle asia painting">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/09/BED04F66-9346-5A02-0BD3-3FA318CB8AEA_thumb.jpg">
+        <h3 class="name">히라쓰카 운이치[平塚運一]의 <백제의 옛 수도[百濟古都]></h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">일본 1935년</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">33.9x48.5cm</p>
+          <p class="location">근대 105</p>
+        </div>
+      </div>
+
+      <div class="element-item middle asia painting">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/03/35FB8B19-41CE-F710-8CC3-CE913445964E_thumb.jpg">
+        <h3 class="name">서화협회 서화첩 - 근대 서화가들이 한데 모인 자리</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">일본 1918년</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">12x18cm</p>
+          <p class="location">구 9994</p>
+        </div>
+      </div>
+
+      <div class="element-item prehistoric asia sculpt">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/09/5392B287-E95A-353F-4D89-2F91BF6BE33B_thumb.jpg">
+        <h3 class="name">함통6년명 쇠북 - 우리나라에서 가장 오래된 청동 북</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">통일신라 865년</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">지름 31.5cm</p>
+          <p class="location">본관 8616</p>
+        </div>
+      </div>
+
+      <div class="element-item middle asia sculpt">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/09/3F1E6913-8071-346C-C2D3-00D8F55119B4_thumb.jpg">
+        <h3 class="name">꽃모양 잔과 잔받침 - 뛰어난 조형미와 정교한 무늬</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">고려 12세기</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">높이 12.1cm, 지름 54.3cm</p>
+          <p class="id">보물 제1899호</p>
+          <p class="location">덕수 130</p>
+        </div>
+      </div>
+
+      <div class="element-item middle asia science">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2019/12/41611642-DFBE-0193-2ED4-8F646C24E6E2_thumb.jpg">
+        <h3 class="name">앙부일구 - 하늘을 우러러 백성의 시간을 담다</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">조선</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">세로 5.6cm 가로 3.4cm 높이 2cm</p>
+          <p class="id">보물 제 852호</p>
+          <p class="location">신수 15157</p>
+        </div>
+      </div>
+
+      <div class="element-item prehistoric asia science">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2019/12/6D904B74-07D4-A5A1-647F-72A127726F48_thumb.jpg">
+        <h3 class="name">이국적인 아름다움, 황남대총 출토 봉수형 유리병</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">신라</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">높이 25cm</p>
+          <p class="id">국보 제193호</p>
+          <p class="location">황남 3321</p>
+        </div>
+      </div>
+
+      <div class="element-item prehistoric sculpt science">
+        <img src="https://www.museum.go.kr/uploadfile/ecms/media/2017/09/72d80d81ca1f92753c3957fa34ad5abf_thumb.jpg">
+        <h3 class="name">얼굴 조각</h3>
+        <div class="time_cover">
+          <span>국적/시대</span>
+          <p class="time">기원전 17~15세기</p>
+        </div>
+        <div class="kind">
+          <span>크기/지정구분</span>
+          <p class="size">높이 7.7cm, 폭 5.3cm</p>
+          <p class="location">본관 004138 00000</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section3">
+      <div class="info">
+        <div class="info_wrap">
+        <ul class="info_section">
+          <li>관람안내</li>
+          <li>전시해설</li>
+          <li>예약하기</li>
+          <li>관람/편의시설</li>
+          <li>오시는길</li>
+        </ul>
+        <ul class="info_section">
+          <li>상설전시</li>
+          <li>특별전시</li>
+          <li>디지털 실감 영상관</li>
+          <li>온라인전시관</li>
+          <li>우리문화재 국외전시</li>
+          <li>소속국립박물관전시</li>
+          <li>전시도록</li>
+          <li>외국박물관한국문화재</li>
+        </ul>
+        <ul class="info_section">
+          <li>교육신청</li>
+          <li>교육자료</li>
+          <li>교육소식</li>
+          <li>스튜디오 몬</li>
+          <li>문화행사</li>
+          <li>온라인 영상 학습 자료실</li>
+        </ul>
+        <ul class="info_section">
+          <li>큐레이터 추천 소장품</li>
+          <li>소장품검색</li>
+          <li>국보/보물 검색</li>
+          <li>수어동영상</li>
+          <li>소장품 열람/복제</li>
+          <li>문화재 기증안내</li>
+        </ul>
+      </div>
+
+      <div class="info_wrap">
+        <ul class="info_section">
+          <li>정기간행물</li>
+          <li>고고학</li>
+          <li>역사학</li>
+          <li>미술사학</li>
+          <li>아시아학</li>
+          <li>도서관</li>
+          <li>기타</li>
+        </ul>
+        <ul class="info_section">
+          <li>소식</li>
+          <li>영상</li>
+          <li>자원봉사안내</li>
+          <li>학예사 자격증 안내</li>
+          <li>전자민원</li>
+          <li>정보공개</li>
+        </ul>
+        <ul class="info_section">
+          <li>인사말</li>
+          <li>비전과 전략</li>
+          <li>발자취</li>
+          <li>조직 및 업무</li>
+          <li>시설 소개</li>
+          <li>수장고</li>
+          <li>박물관관련자료</li>
+        </ul>
+        <ul class="info_border">
+          <li><div class="info_line"></div>어린이박물관</li>
+          <li><div class="info_line"></div>학예사자격증</li>
+          <li><div class="info_line"></div>e뮤지엄</li>
+          <li><div class="info_line"></div>외규장각 의궤 원문</li>
+          <li><div class="info_line"></div>이러닝</li>
+          <li><div class="info_line"></div>박물관 신문</li>
+          <li><div class="info_line"></div>문화상품점</li>
+        </ul>
+      </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer sec1">
+        <div class="sec1_info1">
+          <h4>문화유산표준관리시스템</h4>
+          <h4>VCM 가상명품박물관</h4>
+          <h4>청년멘토</h4>
+        </div>
+        <div class="sec1_info2">
+          <h4>개인정보처리방침</h4>
+          <span>이용약관</span>
+          <span>전자민원</span>
+          <span>공공데이터개방</span>
+          <span>저작권정책</span>
+          <span>클린신고센터</span>
+          <span>찾아오시는길</span>
+        </div>
+      </div>
+      <div class="footer sec2">
+        <div class="modal_box">
+          <div class="modal">
+            <span>관련사이트 바로가기
+              <span class="material-icons">expand_less</span>
+            </span>
+            <div class="modal_table">
+              <ul>
+                <li>국립박물관 문화재단</li>
+                <li>국립중앙박물관회</li>
+                <li>사단법인 한국박물관협회</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal">
+            <span>소속박물관 바로가기
+              <span class="material-icons">expand_less</span>
+            </span>
+            <div class="modal_table">
+              <ul>
+                <li>국립경주박물관</li>
+                <li>국립전주박물관</li>
+                <li>국립대구박물관</li>
+                <li>국립광주박물관</li>
+                <li>국립부여박물관</li>
+                <li>국립공주박물관</li>
+                <li>국립진주박물관</li>
+                <li>국립청주박물관</li>
+                <li>국립김해박물관</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal">
+            <span>가이드북 다운로드
+              <span class="material-icons">expand_less</span>
+            </span>
+            <div class="modal_table">
+              <ul>
+                <li>한국어(PDF)</li>
+                <li>English(PDF)</li>
+                <li>中文(PDF)</li>
+                <li>日本語(PDF)</li>
+                <li>Русский(PDF)</li>
+                <li>Français(PDF)</li>
+                <li>박물관 야외정원 안내</li>
+                <li>프로그램(5월~7월)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h4>© National Museum of Korea.</h4>
+      </div>
+      <div class="footer sec3">
+        <span>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br>
+          대표전화 02-2077-9000</span>
+        
+        <div class="sns_link">
+          <div class="border"><a href="#">FACEBOOK</a></div>
+          <div class="border"><a href="#">INSTAGRAM</a></div>
+          <div class="border"><a href="#">YOUTUBE</a></div>
+        </div>
+      </div>
+      <div class="grid_vertical v_1 footer_v"></div>
+      <div class="grid_vertical v_2 footer_v"></div>
+      <div class="grid_horizontal h_1 footer_h"></div>
+    </footer>
+</div>
+</body>
+<script src="./js/main.js" defer></script>
+<script src="./js/jquery.js" defer></script>
+<script src="./js/filter.js" defer></script>
+</html>
